@@ -5,10 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 
-import { MatNativeDateModule } from '@angular/material/core';
-import { MatDialogRef, MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -19,8 +18,8 @@ import { MatDialogRef, MatDialogModule } from '@angular/material/dialog';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatNativeDateModule,
-    MatDialogModule
+    DashboardModule,
+
   ],
   bootstrap: [AppComponent]
 })
