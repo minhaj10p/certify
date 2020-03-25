@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { MatButtonModule } from '@angular/material/button'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
+
 const modules = [
   MatButtonModule,
   MatFormFieldModule,
@@ -18,6 +22,10 @@ const modules = [
   MatInputModule,
   MatRippleModule,
   MatNativeDateModule,
+  MatToolbarModule,
+  FormsModule,
+  ReactiveFormsModule,
+  MatSnackBarModule
 ]
 
 @NgModule({
