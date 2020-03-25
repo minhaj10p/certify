@@ -8,6 +8,7 @@ import { SharedModule } from './shared/shared.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { CertificateModule } from './certificate/certificate.module';
 import { HttpClientModule } from '@angular/common/http';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
     DashboardModule,
     CertificateModule
   ],
+  providers:  [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
