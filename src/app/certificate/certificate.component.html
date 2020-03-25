@@ -1,0 +1,48 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span>Certificates</span>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+
+<div>
+
+    <div *ngIf="certificateDetails" style="text-align: center; padding-top: 30px; font-family: cursive;">
+        <div>
+            <h2 class="heading-color"> Certificate ID</h2>
+            <h3 class="attr-detail-font">{{certificateDetails.certificate_id}}</h3>
+        </div>
+        <hr class="hr-width">
+
+        <div>
+            <h2 class="heading-color"> Device ID</h2>
+            <h3 class="attr-detail-font">{{certificateDetails.device_id}}</h3>
+        </div>
+        <hr class="hr-width">
+        <div>
+            <h2 class="heading-color"> Is certificate for this device revoked? </h2>
+            <h3 >{{certificateDetails.revoked ? 'YES' : 'NO'}}</h3>
+        </div>
+        <hr class="hr-width">
+        <div>
+            <h2 class="heading-color"> Expiration</h2>
+            <h3 >{{certificateDetails.expiry_date | date:"dd-m-yyyy hh:mm:ss"}}</h3>
+        </div>
+        <hr class="hr-width">
+        <div>
+            <h2 class="heading-color"> Valid till </h2>
+            <h3 >{{certificateDetails.expiry_date | date:"dd-MM-yyyy hh:mm:ss"}}</h3>
+
+        </div>
+
+        <hr class="hr-width">
+        <div *ngIf="!certificateDetails.revoked" class="example-button-row" style="padding-top: 30px;">
+            <button class="revoke-btn" mat-raised-button color="warn">REVOKE</button>
+        </div>
+
+
+
+
+
+    </div>
+</div>
